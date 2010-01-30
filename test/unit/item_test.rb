@@ -1,5 +1,6 @@
 require 'test_helper'
 
 class ItemTest < ActiveSupport::TestCase
-  should_have_and_belong_to_many :categories
+  should_have_many :categorizations
+  should_have_many :categories, :through => :categorizations
 end
